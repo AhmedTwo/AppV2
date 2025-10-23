@@ -1,6 +1,7 @@
 <script setup>
 import { computed, onMounted } from 'vue'
 import { RouterLink, RouterView, useRouter } from 'vue-router'
+import ImagesLogo from './assets/images/logo_portal_job.png'
 
 const router = useRouter()
 </script>
@@ -9,18 +10,17 @@ const router = useRouter()
   <header id="headerOne">
     <nav id="navOne">
       <div class="nav-left">
-        <a href="/" class="logo"> </a>
+        <a href="/" class="logo">
+          <img :src="ImagesLogo" alt="fond logo portal job" />
+        </a>
       </div>
 
       <div class="nav-right">
         <div class="user-info">
-          <a class="<?= $activePage === 'connexion' ? 'active' : '' ?>" href="/connexion">
+          <a href="/connexion">
             <button class="sign_in">CONNEXION</button>
           </a>
-          <a
-            class="<?= $activePage === 'inscription' ? 'active' : '' ?>"
-            href="/inscription/addUser/"
-          >
+          <a href="/inscription/addUser/">
             <button class="sign_up">INSCRIPTION</button>
           </a>
         </div>
@@ -37,4 +37,8 @@ const router = useRouter()
   </footer>
 </template>
 
-<style></style>
+<style scoped>
+.logo img {
+  width: 250px;
+}
+</style>
