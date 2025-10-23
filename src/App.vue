@@ -17,10 +17,10 @@ const router = useRouter()
 
       <div class="nav-right">
         <div class="user-info">
-          <a href="/connexion">
+          <a href="/SignIn">
             <button class="sign_in">CONNEXION</button>
           </a>
-          <a href="/inscription/addUser/">
+          <a href="/SignUp/addUser/">
             <button class="sign_up">INSCRIPTION</button>
           </a>
         </div>

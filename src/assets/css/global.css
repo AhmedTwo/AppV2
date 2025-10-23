@@ -7,14 +7,23 @@
 }
 
 html,
-body,
-#app {
+body {
   margin: 0;
   padding: 0;
-  min-height: 100%;
+  height: 100%;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background-color: #f4f4f8;
   color: var(--text);
+}
+
+#app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* prend toute la hauteur de la fenêtre */
+}
+
+main {
+  flex: 1; /* pousse le footer vers le bas */
 }
 
 /* Header */
@@ -33,6 +42,21 @@ body,
   align-items: center;
   padding: 1rem 3rem;
   background-color: rgb(240, 240, 240);
+}
+
+/* Footer */
+footer {
+  background-color: #2c3e50;
+  color: #ecf0f1;
+  padding: 20px 0;
+  text-align: center;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+}
+
+footer p {
+  text-align: center;
+  margin: 0;
+  font-size: 14px;
 }
 
 .user-info {
@@ -72,21 +96,4 @@ body,
   background-color: var(--primary-dark);
   border-color: var(--primary-dark);
   box-shadow: 0 4px 8px rgba(0, 123, 255, 0.3);
-}
-
-/* Footer */
-footer {
-  position: relative;
-  bottom: 0;
-  width: 100%;
-  background-color: #2c3e50;
-  color: #ecf0f1;
-  padding: 20px 0;
-  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
-}
-
-footer p {
-  text-align: center;
-  margin: 0;
-  font-size: 14px;
 }

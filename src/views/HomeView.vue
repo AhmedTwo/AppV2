@@ -1,10 +1,10 @@
 <script setup>
-import ImagesLogo from '../assets/images/logo_portal_job.png'
+import ImagesLogo from '../assets/images/imagePortal.png'
 </script>
 
 <template>
+  <img :src="ImagesLogo" alt="fond logo portal job" class="background-logo" />
   <main class="hero">
-    <img :src="ImagesLogo" alt="fond logo portal job" class="background-logo" />
     <div class="hero-content">
       <h1>Votre avenir professionnel commence ici !</h1>
       <h1></h1>
@@ -45,12 +45,14 @@ import ImagesLogo from '../assets/images/logo_portal_job.png'
 <style scoped>
 .background-logo {
   position: absolute;
-  margin-top: 5%;
-  width: 80vw;
-  height: 50vh;
-  object-fit: contain;
+  top: 0;
+  left: 0;
+  width: 99vw;
+  height: 99vh;
+  object-fit: cover;
+  opacity: 0.1; /* ajuste la transparence à mon goût */
   z-index: 1;
-  opacity: 0.5; /* ajuste la transparence à mon goût */
+  pointer-events: none;
 }
 
 .hero {
@@ -64,10 +66,11 @@ import ImagesLogo from '../assets/images/logo_portal_job.png'
 .hero h1 {
   font-size: 3rem;
   font-weight: 700;
-  background: linear-gradient(135deg, #007bff, #7c7373);
+  background: linear-gradient(135deg, #7c7373, #007bff);
   color: white;
   border-radius: 20px;
   padding: 5%;
+  margin-top: -1%;
 }
 
 .hero p {
@@ -111,14 +114,44 @@ import ImagesLogo from '../assets/images/logo_portal_job.png'
   padding: 10px 20%;
 }
 
+/* Section Présentation */
+/* Titre */
+.h1-pres {
+  font-size: 2.8rem;
+  font-weight: 800;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-align: center;
+  margin-bottom: 1rem;
+  position: relative;
+  z-index: 1;
+}
+
+.h1-pres::after {
+  content: '';
+  position: absolute;
+  bottom: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, #667eea, #764ba2);
+  border-radius: 2px;
+}
+
+/* Paragraphe */
 .p-pres {
   text-align: center;
   color: black;
   font-size: 1.2rem;
+  position: relative;
 }
 
+/* Liste */
 .pres-ul {
-  list-style: none;
+  font-size: 1rem;
   width: 80%;
   display: grid;
   gap: 1rem;
@@ -129,7 +162,31 @@ import ImagesLogo from '../assets/images/logo_portal_job.png'
   background: rgba(240, 158, 158, 0.199);
   border-radius: 16px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.712);
+  font-size: 1rem;
   color: black;
   text-align: center;
+  list-style: none;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+}
+
+.pres-ul li:nth-child(1) {
+  border-left-color: rgb(45, 226, 211);
+  border-right-color: rgb(45, 226, 211);
+}
+
+.pres-ul li:nth-child(2) {
+  border-left-color: rgb(20, 44, 252);
+  border-right-color: rgb(20, 44, 252);
+}
+
+.pres-ul li:nth-child(3) {
+  border-left-color: rgb(45, 226, 211);
+  border-right-color: rgb(45, 226, 211);
+}
+
+.pres-ul li:nth-child(4) {
+  border-left-color: rgb(20, 44, 252);
+  border-right-color: rgb(20, 44, 252);
 }
 </style>
