@@ -7,7 +7,9 @@ import ImagesLogo from '../assets/images/imagePortal.png'
   <div id="containerFirst">
     <img :src="ImagesLogo" alt="fond logo portal job" class="background-logo" />
     <div id="containerSecond">
-      <h1 class="h1Login"> CONNEXION &nbsp;&nbsp; <img :src="ImagesPortal" alt="fond logo porte de portal job" width="35" />
+      <h1 class="h1Login">
+        CONNEXION &nbsp;&nbsp;
+        <img :src="ImagesPortal" alt="fond logo porte de portal job" width="35" />
       </h1>
       <!-- &nbsp; me permet de faire un espace en html -->
       <div
@@ -39,7 +41,7 @@ import ImagesLogo from '../assets/images/imagePortal.png'
           <br />
         </div>
 
-        <button type="submit" id="sign_in">SE CONNECTER</button>
+        <button type="submit" id="sign_in"><a href="/home">Connexion !</a></button>
       </form>
     </div>
   </div>

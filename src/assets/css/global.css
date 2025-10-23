@@ -1,4 +1,5 @@
 :root {
+  --colorgray: rgb(192, 167, 167);
   --primary: #007bff;
   --primary-dark: #0056b3;
   --text: black;
@@ -23,7 +24,7 @@ body {
 }
 
 main {
-  flex: 1; /* pousse le footer vers le bas */
+  flex: 1; /* Remplit l'espace avant le footer */
 }
 
 /* Header */
